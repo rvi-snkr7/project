@@ -1,0 +1,17 @@
+<h1>Patients#index</h1>
+ <%= link_to "Logout", destroy_user_session_path, :class => 'navbar-link'  %>
+
+<div>
+  <% if current_user.has_role? :receptionist %>
+    <%= link_to "New patient" ,patients_index_path %>
+    <%else current_user.has_role? :doctor %>
+    <p>ravi</p>
+    <% @patients.each do|patient| %>
+      <%patient.name %>
+    <%end %>
+    <%end %>
+
+</div>
+<div>
+
+</div>

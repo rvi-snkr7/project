@@ -1,0 +1,12 @@
+<h1>Register Patient</h1>
+
+<%= form_with model:@patient do |form| %>
+  <div>
+    <%= form.label :NAME %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.submit "Register" %>
+  </div>
+<% end %>
